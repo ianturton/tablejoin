@@ -1,5 +1,17 @@
-# tablejoin
+# Table Join Process
+
 A WPS Process to execute a table join between two GeoServer layers or datasets.
+
+## Building
+
+Set the required versions of GeoTools and GeoServer in the `pom.xml` file and then
+
+    mvn clean install
+    mvn assembly:single
+    
+will generate a zip file called `target/tablejoin-0.0.1-SNAPSHOT-bin.zip` which can be unpacked into the GeoServer `WEB-INF/lib` directory.
+
+## Usage
 
 You can specify the input data sets by reference or by explict listing in the request. You must also provide a filter that is the
 equivalent of an SQL where clause. It should provide a filter which is true when you want a row joined to another, if multiple 
